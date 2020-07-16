@@ -1,10 +1,10 @@
-import React, { useCallback, useRef, useContext } from 'react';
+import React, { useCallback, useRef } from 'react';
 import { FiLogIn, FiMail, FiLock } from 'react-icons/fi';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 import * as yup from 'yup';
 import getValidationErrors from '../../utils/getValidationErrors';
-import { AuthContext } from '../../context/AuthContext';
+import { useAuth } from '../../hooks/AuthContext';
 
 import logoImg from '../../assets/logo.svg';
 
@@ -13,7 +13,7 @@ import Button from '../../components/button';
 
 import { Container, Content, Background } from './styles';
 
-interface SigiInFormData {
+interface SignInFormData {
   email: string;
   password: string;
 }
@@ -21,12 +21,10 @@ interface SigiInFormData {
 const SignIn: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
-  const { user, signIn } = useContext(AuthContext);
-
-  console.log(user);
+  const { signIn } = useAuth();
 
   const handleSubmit = useCallback(
-    async (data: SigiInFormData) => {
+    async (data: SignInFormData) => {
       try {
         formRef.current?.setErrors({});
         const schema = yup.object().shape({
