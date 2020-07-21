@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { shade } from 'polished';
 
-import signUpBackgroundImg from '../../assets/sign-up-background.png';
+import signUpBackgroundImg from '../../assets/sign-up-background-urban.png';
 
 export const Container = styled.div`
   height: 100vh;
@@ -18,6 +18,11 @@ export const Content = styled.div`
 
   width: 100%;
   max-width: 700px;
+
+  img {
+    max-width: 300px;
+    margin-top: 50px;
+  }
 
   form {
     margin: 80px 0;

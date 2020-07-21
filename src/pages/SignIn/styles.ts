@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { shade } from 'polished';
 
-import signInBackgroundImg from '../../assets/sign-in-background.png';
+import signInBackgroundImg from '../../assets/sign-in-background-urban.png';
 
 export const Container = styled.div`
   height: 100vh;
@@ -30,19 +30,24 @@ export const Content = styled.div`
   }
 
   a {
-    color: #f4efe8;
+    color: #715fa9;
     display: block;
     margin-top: 24px;
     text-decoration: none;
     transition: color 0.2s;
 
     &:hover {
-      color: ${shade(0.2, '#f4efe8')};
+      color: ${shade(0.2, '#715fa9')};
     }
   }
 
+  img {
+    max-width: 300px;
+    margin-top: 50px;
+  }
+
   > a {
-    color: #ff9000;
+    color: #715fa9;
     display: block;
     margin-top: 24px;
     text-decoration: none;
@@ -56,7 +61,7 @@ export const Content = styled.div`
     }
 
     &:hover {
-      color: ${shade(0.2, '#ff9000')};
+      color: ${shade(0.2, '#715fa9')};
     }
   }
 `;

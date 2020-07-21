@@ -8,7 +8,7 @@ interface ContainerProps {
 }
 
 export const Container = styled.div<ContainerProps>`
-  background: #232129;
+  background: #FFF;
   border-radius: 10px;
   padding: 16px;
   width: 100%;
@@ -32,14 +32,14 @@ export const Container = styled.div<ContainerProps>`
   ${props =>
     props.isFocused &&
     css`
-      color: #ff9000;
-      border-color: #ff9000;
+      color: #715fa9;
+      border-color: #715fa9;
     `}
 
   ${props =>
     props.isFilled &&
     css`
-      color: #ff9000;
+      color: #715fa9;
     `}
 
 
@@ -47,7 +47,7 @@ export const Container = styled.div<ContainerProps>`
     flex: 1;
     background: transparent;
     border: 0;
-    color: #f4efe8;
+    color: #715fa9;
     &::placeholder {
       color: #666360;
     }

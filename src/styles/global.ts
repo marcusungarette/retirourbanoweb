@@ -9,13 +9,13 @@ export default createGlobalStyle`
  }
 
  body {
-   background: #312E38;
-   color: #FFF;
+   background: #FFF;
+   color: #000;
    -webkit-font-smoothing: antialiased;
  }
 
  body, input, button {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Quicksand', serif;
   font-size: 16px;
  }
 
