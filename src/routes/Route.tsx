@@ -35,7 +35,6 @@ const Route: React.FC<RouteProps> = ({
           );
         }}
       />
-      ;
     </>
   );
 };
